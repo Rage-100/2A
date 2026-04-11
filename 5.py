@@ -19,10 +19,11 @@ print(f"Is a Dog an Animal? {nx.has_path(G, 'Dog', 'Animal')}")
   
 # Visualize 
 pos = nx.spring_layout(G, seed=42) 
+plt.figure(figsize=(10,11))
 nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=2000, 
 arrows=True) 
 nx.draw_networkx_edge_labels(G, pos, edge_labels=nx.get_edge_attributes(G, 
 'label'), font_color='red') 
 plt.title("Simple Semantic Network") 
 plt.axis('off') 
-plt.show()
+plt.show() 
