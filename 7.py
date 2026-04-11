@@ -1,8 +1,8 @@
-from pgmpy.models import BayesianNetwork 
+from pgmpy.models import DiscreteBayesianNetwork 
 from pgmpy.factors.discrete import TabularCPD 
 from pgmpy.inference import VariableElimination 
   
-model = BayesianNetwork([('Smoking', 'Disease'), ('Pollution', 'Disease')]) 
+model = DiscreteBayesianNetwork([('Smoking', 'Disease'), ('Pollution', 'Disease')]) 
 model.add_cpds( 
     TabularCPD('Smoking', 2, [[0.7], [0.3]]), 
     TabularCPD('Pollution', 2, [[0.6], [0.4]]), 
