@@ -1,7 +1,7 @@
 import itertools 
   
 def generate_sample_space(elements, r): 
-    print(f"Elements: {elements}, Outcome length: {r}\n") 
+    print(f"Elements: {elements}, \nOutcome length: {r}\n") 
      
     # Permutations (order matters) 
     permutations = list(itertools.permutations(elements, r)) 
